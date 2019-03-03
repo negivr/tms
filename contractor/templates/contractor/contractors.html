@@ -1,0 +1,16 @@
+{% extends "contractor/base.html" %}
+
+{% block content %}
+    {% for contractor in contractors %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ contractor.name }}</a>
+              <small class="text-muted">{{ contractor.address }}</small>
+            </div>
+              <p class="article-title">{{ contractor.fein }}</p>
+            <!--<h2><a class="article-title" href="#">{{ contractor.fein }}</a></h2>-->
+          </div>
+        </article>
+    {% endfor %}
+{% endblock %}

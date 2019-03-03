@@ -1,0 +1,19 @@
+{% extends "contractor/base.html" %}
+
+{% block content %}
+    {% for person in persons %}
+        <article class="media content-section">
+          <div class="media-body">
+            <div class="article-metadata">
+              <a class="mr-2" href="#">{{ person.first_name }} {{ person.last_name }}</a>
+              <!--<small class="text-muted">{{ person.last_name }}</small>-->
+            </div>
+              <p class="article-title">{{ person.dob|date:"F d, Y" }}</p>
+              <p class="article-title">{{ person.ssn }}</p>
+            <!--<h2><a class="article-title" href="#">{{ contractor.fein }}</a></h2>-->
+          </div>
+        </article>
+    {% endfor %}
+{% endblock %}
+
+<!--https://docs.djangoproject.com/en/2.1/ref/templates/builtins/#date-->
